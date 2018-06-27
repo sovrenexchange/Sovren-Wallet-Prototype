@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/Sovren.main.css" />
+    <link rel="stylesheet" href="themes/Sovren.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /><!-- http://code.jquery.com/mobile/1.4.5 -->
+    <script src="js/jquery-1.11.1.min.js"></script> <!-- http://code.jquery.com/ -->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>   <!-- http://code.jquery.com/mobile/1.4.5-->
+
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jqcandlestick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jqcandlestick.css" />    
+
+    <script type="text/javascript">
+
+function footerAlign() {
+  $('footer').css('display', 'block');
+  $('footer').css('height', 'auto');
+  var footerHeight = $('footer').outerHeight();
+  $('body').css('padding-bottom', footerHeight);
+  $('footer').css('height', footerHeight);
+}
+
+
+$(document).ready(function(){
+  footerAlign();
+
+      $('#tabs').tabs({hide: 'fade', show: 'fade'});
+      $("#tabmywallet").click();
+
+
+
+      
+});
+
+$( window ).resize(function() {
+  footerAlign();
+});    
+
+function walletbtnClick()
+{
+    alert('hello');
+    //$('#tabs  a[href="#coindetails"]').tab('show');
+    //$('#coindetails').trigger('click');
+    //$( "#tabs" ).tabs("option", "active", 1);
+    $("#tabcoindetails").click();
+}
+
+</script>
+</head>
+<body>
+    <div data-role="page" data-theme="d" id="Login">
+    
+        <div data-role="header">
+            <img src="Images/logo-final.png" style="height:50px;" />
+            <img src="Images/settings-512.png" class="settings" />
+        </div><!-- /header -->
+
+        <div role="main" class="ui-content">
+
+
+            <label for="text-3">Email Id/Username</label>
+            <input type="text" data-clear-btn="true" name="text-3" id="text-3" value="">
+
+            <label for="password">Password</label>
+            <input type="password" data-clear-btn="true" name="password-2" id="password-2" value="" autocomplete="off">
+
+            <a href="#mainexchangepage" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user" data-transition="flip">Login</a>
+            <p><a href="#foo">Forgot your password</a></p>
+            <p>Don't have an account yet? <a href="#foo">Register</a></p>
+
+        </div><!-- /content -->
+
+        <div data-role="footer">
+            <h6>© 2018 Sovren Exchange. All rights reserved.</h6>
+        </div><!-- /footer -->
+</div>
+    <!-- Start of second page -->
+    <div data-role="page" id="mainexchangepage" data-theme="d">
+
+        <div data-role="header">
+            <img src="Images/logo-final.png" style="height:50px" />
+            <img src="Images/settings-512.png" class="settings" />
+        </div><!-- /header -->
+
+        <div data-role="tabs" id="tabs">
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="tabmywallet"  href="#mywallet" data-ajax="false" class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-top">My Wallet</a></li>
+                    <li><a id="tabcoindetails" href="#coindetails" data-ajax="false"  class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-top">Coin Details</a></li>
+                </ul>
+            </div>
+            <div  id="mywallet"  class="ui-body-d ui-content">
+                <a href=# id="walletbtns" onclick="javascript:walletbtnClick();" class="ui-btn ui-content">
+                    <div>
+                    <div >
+                        <img src="Images/bitcoin.png" class="imgCoin" />
+                        <div class="coinTitle">BitCoin</div>
+                        <div class="coinshorttitle">BTC</div>
+                        <img src="Images/UpArrow.png" class="Arrow" />                            
+                        <div class="rightTitleAmount">+1.09%</div>
+                        <div class="rightshortTitleAmount">+0.1349</div>
+                        </div>       
+                    <div class="leftTitleAmount">$10350.0</div>
+                    <div class="leftshortTitleAmount">0.1349</div>
+                    
+                    </div>
+                </a>
+
+                <a href=# class="ui-btn ui-content">
+                        <div>
+                        <div >
+                            <img src="Images/ethereum.png" class="imgCoin"  />
+                            <div class="coinTitle" >Ethereum</div>
+                            <div class="coinshorttitle">ETH</div>
+                            <img src="Images/DownArrow.png" class="Arrow" />                            
+                            <div class="rightTitleAmount">-1.09%</div>
+                            <div class="rightshortTitleAmount">-0.14</div>
+                        </div>       
+                        <div class="leftTitleAmount">$8350.0</div>
+                        <div class="leftshortTitleAmount">0.1349</div>
+                        
+                        </div>
+                    </a>
+                    <a href=# class="ui-btn ui-content">
+                            <div>
+                            <div >
+                                <img src="Images/ripple.png" class="imgCoin"  />
+                                <div class="coinTitle" >Ripple</div>
+                                <div class="coinshorttitle">XRP</div>
+                                <img src="Images/DownArrow.png" class="Arrow" />                            
+                                <div class="rightTitleAmount">-0.09%</div>
+                                <div class="rightshortTitleAmount">-0.19</div>
+                                </div>       
+                            <div class="leftTitleAmount">$5350.0</div>
+                            <div class="leftshortTitleAmount">0.1349</div>
+                            
+                            </div>
+                        </a>
+                        <a href=# class="ui-btn ui-content">
+                                <div>
+                                <div >
+                                    <img src="Images/Litecoin-icon.png" class="imgCoin"  />
+                                    <div class="coinTitle" >Litecoin</div>
+                                    <div class="coinshorttitle">LTC</div>
+                                    <img src="Images/UpArrow.png" class="Arrow" />  
+                                    <div class="rightTitleAmount">+2.09%</div>
+                                    <div class="rightshortTitleAmount">+0.13</div>
+                                                                      
+                                </div>       
+                                <div class="leftTitleAmount">$20350.0</div>
+                                <div class="leftshortTitleAmount">0.19</div>
+                                
+                                </div>
+                            </a>
+                            
+            </div>
+            <div  id="coindetails" class="ui-body-d ui-content">
+            </div>
+        
+            <div id="footer">
+                <div data-role="controlgroup" data-type="horizontal" data-mini="true"  style="text-align: center">
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-top">My Wallet</a>
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-top">Coin Details</a>
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-bullets ui-btn-icon-top">Transactions</a>
+                    <!--a href="#" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-top">Accounts</a-->
+                </div>
+        </div><!-- /footer -->
+</div>
+
+    </div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+h6 {
+    font-size:3px;
+}
+td {
+    padding:0px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+    border-bottom: 1px solid Gainsboro;
+}
+a:hover {
+    color: SeaGreen;
+    border-bottom: 1px solid Black;
+}
+
+.ui-table-columntoggle-btn {
+    display: none !important;
+}
+
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:70px;
+    width:100%;
+    background:black;
+ }
+
+ /* IE 6 
+* html #footer {
+    position:absolute;
+    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+ }*/
+
+ .greenbutton{
+    background: greenyellow; color: white;
+ }
+
+.jqcandlestick-container {
+    width: 250px;
+    height: 150px;
+}
+
+.hlrowred td,
+.hlrowred
+{
+    background: rgb(233, 122, 150); color: white;    
+}
+
+.settings
+{
+    height:40px;float: right;padding-right: 10px;padding-top:5px;    
+}
+
+.imgCoin
+{
+    height:40px;float: left;padding-right: 10px;padding-top:5px;
+}
+.coinTitle
+{
+    font-size: 25px; text-align: left;
+}
+.coinshorttitle
+{
+    font-size: 12px;text-align: left
+}
+
+.Arrow
+{
+    height:40px;float: right;padding-right: 10px;
+}
+.leftTitleAmount
+{
+    font-size: 30px; padding-top: 5px;text-align: left
+}
+.leftshortTitleAmount
+{
+    font-size: 12px; padding-top: 5px;text-align: left
+}
+.rightTitleAmount
+{
+    font-size: 12px; padding-top: 10px;text-align: right; 
+}
+.rightshortTitleAmount
+{
+    font-size: 8px; padding-top: 10px;text-align: right;
+}
